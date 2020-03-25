@@ -19,7 +19,8 @@
 
 <button  style="margin-top:100px;margin-bottom:10px">Documentation</button>  <br>
 
-<button class="btn btn-primary" (click)="documentationStart()"> Start</button>&nbsp;&nbsp;&nbsp;
+<button class="btn btn-primary"[disabled]="startBtnDisabledDoc" (click)="documentationStart()"> Start</button>&nbsp;&nbsp;&nbsp;
 
-<button class="btn btn-primary" (click)="documentationEnd()">End</button>
-<p>{{minuteLeft}}:{{secondLeft}}minutes  Left....</p> 
+<button class="btn btn-primary"[disabled]="endBtnDisabledDoc" (click)="documentationEnd()">End</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="btn btn-primary" (click)="docReset()">Reset</button>&nbsp;&nbsp;&nbsp;
+<p>{{docMinuteLeft}}:{{docSecondLeft}} minutes  Left....</p> 
